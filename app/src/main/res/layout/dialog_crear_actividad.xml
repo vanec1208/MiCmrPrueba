@@ -82,16 +82,29 @@
 
     </LinearLayout>
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/style_edit_text"
-        android:enabled="false"
-        android:hint="Hora"
-        android:id="@+id/txtHora"/>
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/style_edit_text"
+            android:enabled="false"
+            android:hint="Hora"
+            android:id="@+id/txtHora"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_clock"
+            android:id="@+id/imgClock"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"

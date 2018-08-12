@@ -57,11 +57,32 @@ public class ListActividadesItemAdapter extends BaseAdapter {
 
         holder.lblDescripcion.setText("Descripción: " + actividad.getDescripcion());
         holder.lblTipo.setText("Tipo: " + actividad.getTipo());
-        /*holder.lblOrganizacion.setText("Organización: " + actividad.getOrganizacion().getNombre());
-        holder.lblPersona.setText("Persona: " + actividad.getPersona().getNombre());
-        holder.lblNegocio.setText("Negocio: " + actividad.getNegocio().getTitulo());
+
+        if(actividad.getOrganizacion() == null) {
+            holder.lblOrganizacion.setVisibility(View.GONE);
+        } else {
+            holder.lblOrganizacion.setVisibility(View.VISIBLE);
+            holder.lblOrganizacion.setText("Organización: " + actividad.getOrganizacion().getNombre());
+        }
+
+        if(actividad.getPersona() == null) {
+            holder.lblPersona.setVisibility(View.GONE);
+        }
+        else {
+            holder.lblPersona.setVisibility(View.VISIBLE);
+            holder.lblPersona.setText("Persona: " + actividad.getPersona().getNombre());
+        }
+
+        if(actividad.getNegocio() == null) {
+            holder.lblNegocio.setVisibility(View.GONE);
+        }
+        else {
+            holder.lblNegocio.setVisibility(View.VISIBLE);
+            holder.lblNegocio.setText("Negocio: " + actividad.getNegocio().getTitulo());
+        }
+
         holder.lblFecha.setText("Fecha: " + actividad.getFecha());
-        holder.lblHora.setText("Hora: " + actividad.getHora());*/
+        holder.lblHora.setText("Hora: " + actividad.getHora());
 
         return view;
     }

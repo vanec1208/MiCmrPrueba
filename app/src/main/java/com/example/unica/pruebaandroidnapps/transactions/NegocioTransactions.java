@@ -3,6 +3,8 @@ package com.example.unica.pruebaandroidnapps.transactions;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.example.unica.pruebaandroidnapps.beans.Negocio;
 import com.example.unica.pruebaandroidnapps.beans.Organizacion;
@@ -42,7 +44,7 @@ public class NegocioTransactions extends InstanceDb {
                 "N." + PruebaTables.NegociosTable.FECHA_CIERRE + ", " +         //6
                 "N." + PruebaTables.NegociosTable.ESTADO + ", " +               //7
                 "O." + PruebaTables.OrganizacionesTable.NOMBRE + ", " +         //8
-                "P." + PruebaTables.PersonasTable.NOMBRE                       //9
+                "P." + PruebaTables.PersonasTable.NOMBRE                        //9
                 ;
 
         Cursor c = db.rawQuery("SELECT " + col + " FROM " + PruebaTables.NegociosTable.TABLE_NAME +

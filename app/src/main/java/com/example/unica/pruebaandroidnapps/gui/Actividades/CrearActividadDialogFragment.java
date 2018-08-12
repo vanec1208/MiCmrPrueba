@@ -38,8 +38,9 @@ public class CrearActividadDialogFragment extends DialogFragment {
     private Spinner spnPersona;
     private Spinner spnNegocio;
     private EditText txtFecha;
-    private EditText txtHora;
     private ImageView imgCalendar;
+    private EditText txtHora;
+    private ImageView imgClock;
     private Button btnAgregar;
     private Button btnCancelar;
 
@@ -61,6 +62,7 @@ public class CrearActividadDialogFragment extends DialogFragment {
         txtFecha = view.findViewById(R.id.txtFecha);
         imgCalendar = view.findViewById(R.id.imgCalendar);
         txtHora = view.findViewById(R.id.txtHora);
+        imgClock = view.findViewById(R.id.imgClock);
         btnAgregar = view.findViewById(R.id.btnAgregar);
         btnCancelar = view.findViewById(R.id.btnCancelar);
 
@@ -99,6 +101,14 @@ public class CrearActividadDialogFragment extends DialogFragment {
             public void onClick(View view) {
                 DatePickerDialogFragment datePickerDialog = new DatePickerDialogFragment();
                 datePickerDialog.show(getChildFragmentManager(), "datePicker");
+            }
+        });
+
+        imgClock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TimePickerDialogFragment timePickerDialog = new TimePickerDialogFragment();
+                timePickerDialog.show(getChildFragmentManager(), "timePicker");
             }
         });
 
@@ -263,9 +273,9 @@ public class CrearActividadDialogFragment extends DialogFragment {
             final AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
             LayoutInflater inflater = getActivity().getLayoutInflater();
-            View view = inflater.inflate(R.layout.dialog_date, null);
+            View view = inflater.inflate(R.layout.dialog_time, null);
 
-            timePicker = view.findViewById(R.id.date);
+            timePicker = view.findViewById(R.id.time);
             btnAceptar = view.findViewById(R.id.btnAceptar);
             btnCancelar = view.findViewById(R.id.btnCancelar);
 

@@ -57,10 +57,21 @@ public class ListNegociosItemAdapter extends BaseAdapter {
 
         holder.lblTitulo.setText("Titulo: " + negocio.getTitulo());
         holder.lblDescripcion.setText("Descripción: " + negocio.getDescripcion());
-        if(negocio.getOrganizacion() == null) holder.lblOrganizacion.setVisibility(View.GONE);
-        else holder.lblOrganizacion.setText("Organización: " + negocio.getOrganizacion().getNombre());
-        if(negocio.getPersona() == null) holder.lblPersona.setVisibility(View.GONE);
-        else holder.lblPersona.setText("Persona: " + negocio.getPersona().getNombre());
+
+        if(negocio.getOrganizacion() == null) {
+            holder.lblOrganizacion.setVisibility(View.GONE);
+        }else {
+            holder.lblOrganizacion.setVisibility(View.VISIBLE);
+            holder.lblOrganizacion.setText("Organización: " + negocio.getOrganizacion().getNombre());
+        }
+
+        if(negocio.getPersona() == null) {
+            holder.lblPersona.setVisibility(View.GONE);
+        } else {
+            holder.lblPersona.setVisibility(View.VISIBLE);
+            holder.lblPersona.setText("Persona: " + negocio.getPersona().getNombre());
+        }
+
         holder.lblValor.setText("Valor: " + negocio.getValor());
         holder.lblFechaCierre.setText("Fecha de cierre: " + negocio.getFechaCierre());
         holder.lblEstado.setText("Estado: " + negocio.getEstado());
