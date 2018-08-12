@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icon_nav_house"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_personas"
+            android:icon="@drawable/icon_nav_personas"
+            android:title="Personas" />
+        <item
+            android:id="@+id/nav_organizaciones"
+            android:icon="@drawable/icon_nav_organizaciones"
+            android:title="Organización" />
+        <item
+            android:id="@+id/nav_negocios"
+            android:icon="@drawable/icon_nav_negocios"
+            android:title="Negocio" />
+
+        <item
+            android:id="@+id/nav_actividades"
+            android:icon="@drawable/icon_nav_actividades"
+            android:title="Actividades" />
+    </group>
+</menu>
